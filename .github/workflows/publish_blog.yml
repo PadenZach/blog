@@ -57,6 +57,11 @@ jobs:
           # Writes to ./output
           . .venv/bin/activate
           make publish
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output/
 
   # Deployment job
   deploy:
