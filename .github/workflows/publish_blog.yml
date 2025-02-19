@@ -55,6 +55,7 @@ jobs:
       - name: Build Blog
         run: |
           # Writes to ./output
+          . .venv/bin/activate
           make publish
 
   # Deployment job
